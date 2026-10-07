@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet" href="./style.css">
+  
+  <title>Frontend Mentor | IP Address Tracker</title>
+</head>
+<body>
+  <main class="tracker">
+    <section class="tracker__hero" aria-labelledby="page-title">
+      <div class="tracker__content">
+        <h1 id="page-title">IP Address Tracker</h1>
+
+        <form class="search" action="#" aria-label="Search for IP address or domain">
+          <label class="visually-hidden" for="search-query">Search for any IP address or domain</label>
+          <input
+            id="search-query"
+            name="search-query"
+            type="search"
+            placeholder="Search for any IP address or domain"
+          >
+          <button class="search__button" type="submit" aria-label="Submit search">
+            <img src="./images/icon-arrow.svg" alt="">
+          </button>
+        </form>
+
+        <section class="details-card" aria-label="IP address details">
+          <article class="details-card__item">
+            <h2>IP Address</h2>
+            <p id="ip-address">Loading...</p>
+          </article>
+
+          <article class="details-card__item">
+            <h2>Location</h2>
+            <p id="location">Loading...</p>
+          </article>
+
+          <article class="details-card__item">
+            <h2>Timezone</h2>
+            <p id="timezone">Loading...</p>
+          </article>
+
+          <article class="details-card__item">
+            <h2>ISP</h2>
+            <p id="isp">Loading...</p>
+          </article>
+        </section>
+
+        <p class="visually-hidden" id="search-status" role="status" aria-live="polite"></p>
+      </div>
+    </section>
+
+    <section class="map" id="map" aria-label="Map showing IP address location"></section>
+  </main>
+
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="./script.js"></script>
+</body>
+</html>
